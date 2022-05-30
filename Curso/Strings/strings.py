@@ -65,7 +65,7 @@ print(cadena.count("to")) # Suma la cantidad de to que hay en la cadena
 print(cadena.isalnum()) # Devuelve false si la cadena contiene carácteres no alfanuméricos
 print(cadena5.isalnum()) # Devuelve true si la cadena contiene solo carácteres alfanuméricos
 print(cadena.isalpha()) # Devuelve true si todos los carácteres son alfabeticos
-print(cadena.strip()) # Elimiena los espacios al principio y al final
+print(cadena.strip()) # Elimina los espacios al principio y al final
 print(cadena5.zfill(20)) # Agrega ceros a la izquierda hasta completar el numero indicado de carácteres
 s = "; ".join(["1", "2", "3"])
 print(s)
