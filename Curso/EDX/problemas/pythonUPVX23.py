@@ -69,3 +69,35 @@ if existe==True:
   print(f"El elemento {elementoBuscado} esta en la lista")
 else:
   print(f"No hemos podido encontrar {elementoBuscado} en la lista")
+
+#Buscando el elemento más grande/pequeño de la lista
+lista = [9,13,2,7,124,-5]
+print(max(lista))
+print(min(lista))
+#como lo harías sin usar max/min?
+#TU RESPUESTA AQUÍ
+#Esta solución no es valida ya que en caso de ser todos lo valores negativos nos daría como valor mayor el 0
+'''
+maximo = 0
+minimo = 0
+for i in lista:
+  if i > maximo:
+    maximo = i
+  elif i < minimo:
+    minimo = i
+print(f'El número más alto es {maximo}')
+print(f'El número más pequeño es {minimo}')
+'''
+mayor = None
+menor = None
+for i in lista:
+  if mayor == None or menor == None:
+    mayor = i
+    menor = i
+  else:
+    if mayor < i:
+      mayor = i
+    if menor > i:
+      menor = i
+print(f'El número más alto es {mayor}')
+print(f'El número más pequeño es {menor}')
