@@ -90,34 +90,105 @@ Escribir un programa que muestre la sumatoria de todos los números entre el 0 y
 9
 Escribir un programa que muestre la sumatoria de todos los múltiplos de 3 encontrados entre el 0 y el 100.
 '''
-sumatoria = 0
-for i in range(0,101):
-    if i%3 == 0:
-        sumatoria = sumatoria + i
-print(sumatoria)
+#from ast import Break
+#sumatoria = 0
+#for i in range(0,101):
+#    if i%3 == 0:
+#        sumatoria = sumatoria + i
+#print(sumatoria)
 
 '''
 10
-Dado un número entero positivo, mostrar su factorial. El factorial de un número se obtiene multiplicando todos los números enteros positivos que hay entre el 1 y ese número.
+Dado un número entero positivo, mostrar su factorial. El factorial de un número se obtiene multiplicando 
+todos los números enteros positivos que hay entre el 1 y ese número.
 '''
+#numero = int(input(f'Introduce un número entero positivo: '))
+#factorial = 1
+#for i in range(1,numero+1):
+#    if numero <= 0: 
+#        print(f'Te he dicho que tiene que ser enteroy positivo merluzo.')
+#        break
+#    else:
+#        factorial = factorial * abs(i)
+#if numero < 1:
+#    print(f'No se ha podido realizar el factorial')
+#else:
+#    print(f'el factorial de {numero} es {factorial}')
 
 '''
 11
-Crear un algoritmo que muestre los primeros 10 números de la sucesión de Fibonacci. La sucesión comienza con los números 0 y 1 y, a partir de éstos, cada elemento es la suma de los dos números anteriores en la secuencia: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55…
+Crear un algoritmo que muestre los primeros 10 números de la sucesión de Fibonacci. 
+La sucesión comienza con los números 0 y 1 y, a partir de éstos, cada elemento es la suma de los dos números anteriores 
+en la secuencia: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55…
 '''
 '''
 12
-Escribir un programa que permita al usuario ingresar 6 números enteros, que pueden ser positivos o negativos. Al finalizar, mostrar la sumatoria de los números negativos y el promedio de los positivos.
-No olvides que no es posible dividir por cero, por lo que es necesario evitar que el programa arroje un error si no se ingresaron números positivos.
+Escribir un programa que permita al usuario ingresar 6 números enteros, que pueden ser positivos o negativos. 
+Al finalizar, mostrar la sumatoria de los números negativos y el promedio de los positivos.
+No olvides que no es posible dividir por cero, por lo que es necesario evitar que el programa arroje un error 
+si no se ingresaron números positivos.
 '''
+#lista = []
+#sumpositivos = 0
+#contador = 0
+#sumnegativos = 0
+#for i in range(0,6):
+#    lista.append(int(input(f'Necesito un número, positivo o negativo: '))) 
+#for i in lista:
+#    if lista[i] >= 0:
+#        sumpositivos = sumpositivos + lista[i]
+#        contador = contador +1
+#    else:
+#        sumnegativos = sumnegativos + lista[i] 
+#print(f'El promedio de los positivos es: {sumpositivos/contador}')
+#print(f'El sumatorio de los negativos es: {sumnegativos}')
+
+
 '''
 13
-Un grupo de amigos decide organizar un juego de estrategia, para lo cual forman dos equipos de 6 integrantes cada uno, donde un integrante de cada equipo es el “jefe” y los otros 5 son sus “oficiales”. La regla más importante del juego es que sólo se comunicarán mediante un canal común, por lo que deben buscar la forma de ocultar el contenido de sus mensajes. Uno de los equipos decide utilizar un método antiguo de encriptación llamado “la cifra del césar”, que consiste en correr cada letra del mensaje –considerando la posición de cada una en el alfabeto– una determinada cantidad de lugares. Ejemplo: si el corrimiento es de 2 lugares, la palabra “ATAQUE” se transforma en “CVCSWG”.
-Cada día, el “jefe” del equipo debe enviar un mensaje a cada uno de sus oficiales. Escribir un programa que permita encriptar los 5 mensajes. El corrimiento (cantidad de lugares que se correrán las letras) será dado por el usuario antes de comenzar a encriptar. Los 5 mensajes usarán el mismo corrimiento.
-Nota: si el alfabeto termina antes de poder correr la cantidad de lugares necesarios, se vuelve a comenzar desde la letra “a”. Ejemplo: la palabra “EXTRA” corrida 3 lugares se convierte en “HAWUD”. Utilizando el alfabeto español, de 27 letras, el siguiente cálculo matemático permite volver a comenzar por el principio una vez que se llegó a la “z”: (índice de la letra a correr+corrimiento)%27
+Un grupo de amigos decide organizar un juego de estrategia, para lo cual forman dos equipos de 6 integrantes cada uno, 
+donde un integrante de cada equipo es el “jefe” y los otros 5 son sus “oficiales”. 
+La regla más importante del juego es que sólo se comunicarán mediante un canal común, 
+por lo que deben buscar la forma de ocultar el contenido de sus mensajes. Uno de los equipos decide utilizar 
+un método antiguo de encriptación llamado “la cifra del césar”, que consiste en correr cada letra del mensaje 
+–considerando la posición de cada una en el alfabeto– una determinada cantidad de lugares. 
+Ejemplo: si el corrimiento es de 2 lugares, la palabra “ATAQUE” se transforma en “CVCSWG”.
+Cada día, el “jefe” del equipo debe enviar un mensaje a cada uno de sus oficiales. 
+Escribir un programa que permita encriptar los 5 mensajes. 
+El corrimiento (cantidad de lugares que se correrán las letras) será dado por el usuario antes de comenzar a encriptar. 
+Los 5 mensajes usarán el mismo corrimiento.
+Nota: si el alfabeto termina antes de poder correr la cantidad de lugares necesarios, se vuelve a comenzar desde la letra “a”. 
+Ejemplo: la palabra “EXTRA” corrida 3 lugares se convierte en “HAWUD”. Utilizando el alfabeto español, de 27 letras, 
+el siguiente cálculo matemático permite volver a comenzar por el principio una vez que se llegó a la “z”: 
+(índice de la letra a correr+corrimiento)%27
 Sólo se encriptarán las letras de los mensajes, dejando al resto de caracteres sin modificación.
 '''
 '''
 14
-Escribir un programa que permita al usuario ingresar dos años y luego imprima todos los años en ese rango, que sean bisiestos y múltiplos de 10. Nota: para que un año sea bisiesto debe ser divisible por 4 y no debe ser divisible por 100, excepto que también sea divisible por 400.
+Escribir un programa que permita al usuario ingresar dos años y luego imprima todos los años en ese rango, 
+que sean bisiestos y múltiplos de 10. Nota: para que un año sea bisiesto debe ser divisible por 4 
+y no debe ser divisible por 100, excepto que también sea divisible por 400.
 '''
+anyo1 = 0
+anyo2 = 0  
+anyo3 = 0
+bisiestos = []
+multiplos = []
+anyo1 = int(input(f'Año de inicio: '))
+anyo2 = int(input(f'Año de finalización: '))
+if anyo1 > anyo2:
+    anyo3 = anyo1
+    anyo1 = anyo2
+    anyo2 = anyo3
+for i in range(anyo1,anyo2+1):
+    if i%10==0 :
+        multiplos.append(i)
+
+for i in range(anyo1,anyo2+1):   
+    if (i%4==0 and i%100!=0):
+        bisiestos.append(i)
+    elif (i%4==0 and i%100==0 and i%400==0):
+        bisiestos.append(i)
+    
+print(f'Lista de años multiplos de 10: {multiplos}')
+print(f'Lista de años bisiestos: {bisiestos}')  
