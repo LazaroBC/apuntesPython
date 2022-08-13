@@ -47,21 +47,30 @@ Leer números enteros positivos de teclado, hasta que el usuario ingrese el 0. I
 '''4
 Leer un número entero positivo desde teclado e imprimir la suma de los dígitos que lo componen.
 '''
-suma = 0
-i = 1
-while i !=0:
-    i = int(input(f'Voy a sumar los números psoitivos hasta que introduzcas un 0: '))
-    if i > 0:
-        suma= suma +i
-    if i == 0:
-        print('Hemos terminado')
-print(f'El sumatorio de tus números es: {suma}')
+# suma = 0
+# i = 1
+# while i !=0:
+#     i = int(input(f'Voy a sumar los números positivos hasta que introduzcas un 0: '))
+#     if i > 0:
+#         suma= suma +i
+#     if i == 0:
+#         print('Hemos terminado')
+# print(f'El sumatorio de tus números es: {suma}')
 '''5
 Solicitar al usuario que ingrese números enteros positivos y, por cada uno, 
 imprimir la suma de los dígitos que lo componen. La condición de corte es que se ingrese el número -1. 
 Al finalizar, mostrar cuántos de los números ingresados por el usuario fueron números pares.
 '''
-
+cantPares = 0
+suma = 0
+i = 0
+while i != -1:
+    i = int(input(f'Introduce números psoitivos hasta que introduzcas un -1: '))
+    if i != -1:
+        print(f'el número suma: {sum(int(digit) for digit in str(i))}')
+    if i%2 == 0:
+        cantPares = cantPares +1
+print(f'El total de números pares introducidos es: {cantPares}')
 '''6
 Mostrar un menú con tres opciones: 1- comenzar programa, 2- imprimir listado, 3-finalizar programa. 
 A continuación, el usuario debe poder seleccionar una opción (1, 2 ó 3). Si elige una opción incorrecta, 
