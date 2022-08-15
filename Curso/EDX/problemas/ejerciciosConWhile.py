@@ -186,6 +186,20 @@ Libro: 20 años después
 Libro: * 
 Fin. Se leyeron 2 líneas completas.
 '''
+# cadena = ''
+# digitos = 0
+# lineas = 0
+# while cadena != '*':
+#     cadena = input(f'Dime el título de un libro: ')
+#     print(f'Libro: {cadena}')
+#     for i in cadena:
+#         if i.isdigit() == True:
+#             digitos = digitos + 1
+#     if cadena == '/':
+#         print(f'Linea completa: Aparecen {digitos} digitos numéricos')
+#         digitos = 0
+#         lineas = lineas +1
+# print(f'Fin. Se leyeron {lineas} lineas completas')
 '''11
 Escribir un programa que solicite el ingreso de una cantidad indeterminada de números mayores que 1, 
 finalizando cuando se reciba un cero. Imprimir la cantidad de números primos ingresados.
