@@ -61,16 +61,16 @@ Solicitar al usuario que ingrese números enteros positivos y, por cada uno,
 imprimir la suma de los dígitos que lo componen. La condición de corte es que se ingrese el número -1. 
 Al finalizar, mostrar cuántos de los números ingresados por el usuario fueron números pares.
 '''
-cantPares = 0
-suma = 0
-i = 0
-while i != -1:
-    i = int(input(f'Introduce números psoitivos hasta que introduzcas un -1: '))
-    if i != -1:
-        print(f'el número suma: {sum(int(digit) for digit in str(i))}')
-    if i%2 == 0:
-        cantPares = cantPares +1
-print(f'El total de números pares introducidos es: {cantPares}')
+# cantPares = 0
+# suma = 0
+# i = 0
+# while i != -1:
+#     i = int(input(f'Introduce números psoitivos hasta que introduzcas un -1: '))
+#     if i != -1:
+#         print(f'el número suma: {sum(int(digit) for digit in str(i))}')
+#     if i%2 == 0:
+#         cantPares = cantPares +1
+# print(f'El total de números pares introducidos es: {cantPares}')
 '''6
 Mostrar un menú con tres opciones: 1- comenzar programa, 2- imprimir listado, 3-finalizar programa. 
 A continuación, el usuario debe poder seleccionar una opción (1, 2 ó 3). Si elige una opción incorrecta, 
@@ -78,12 +78,40 @@ informarle del error. El menú se debe volver a mostrar luego de ejecutada cada 
 Si elige las opciones 1 ó 2 se imprimirá un texto. Si elige la opción 3, se interrumpirá la impresión del menú 
 y el programa finalizará.
 '''
+
+# print(f'Menú\n\
+# ----\n\
+#     1.-Comenzar programa\n\
+#     2.-Imprimir listado\n\
+#     3.-Finalizar programa')
+# opcion = int(input('Seleciona una opción: '))
+# while opcion != 1 or opcion != 2 or opcion != 3:
+#     print(f'Elige una opción correcta')
+#     if opcion == 1:
+#         print(f'Comenzando el programa')
+#     elif opcion == 2:
+#         print(f'Imprimiendo el listado')
+#     elif opcion == 3:
+#         print('Finalizando el programa')
+#         break
+#     opcion = int(input('Seleciona una opción: '))
+# print(f'Adios')
 '''7
 Solicitar al usuario el ingreso de una frase y de una letra (que puede o no estar en la frase). 
 Recorrer la frase, carácter a carácter, comparando con la letra buscada. Si el carácter no coincide, 
 indicar que no hay coincidencia en esa posición (imprimiendo la posición) y continuar. 
 Si se encuentra una coincidencia, indicar en qué posición se encontró y finalizar la ejecución.
 '''
+# frase = input(f'Dime una frase que contenga la letra l\n').lower()
+# letra = 'l'
+# indice = 0
+# while letra == 'l':
+#     if frase[indice]=='l':
+#         print(f'La l a aparecido por primera vez en la posición {indice+1}')
+        
+#         break
+#     print(f'No hubo coincidencia en la posicion {indice+1}')
+#     indice = indice +1
 '''8
 Crear un programa que permita al usuario ingresar los montos de las compras de un cliente 
 (se desconoce la cantidad de datos que cargará, la cual puede cambiar en cada ejecución), 
@@ -92,11 +120,53 @@ Si ingresa un monto negativo, no se debe procesar y se debe pedir que ingrese un
 Al finalizar, informar el total a pagar teniendo que cuenta que, si las ventas superan el total de $1000, 
 se le debe aplicar un 10% de descuento.
 '''
+# monto = None
+# cantidad = 0
+# negativos = 0
+# while monto != 0:
+#     monto = float(input(f'Introducir cantidad (0 para terminar):\n'))
+#     if monto > 0:
+#         cantidad = cantidad + monto 
+#         print(cantidad)
+#     else:
+#         negativos = negativos +1
+# if cantidad >= 1000:
+#     cantidad = cantidad * 0.90
+#     print(f'Aplicado descuento 10%: {cantidad}')
+# else: 
+#     print(f'Monto total = {cantidad}')
+# print(f'Cantidades descartadas: {negativos}')
 '''9
 Crear un programa que solicite el ingreso de números enteros positivos, hasta que el usuario ingrese el 0. 
 Por cada número, informar cuántos dígitos pares y cuántos impares tiene. 
 Al finalizar, informar la cantidad de dígitos pares y de dígitos impares leídos en total.
 '''
+# from curses.ascii import isdigit
+
+# numeros = ''
+# par = 0
+# impar = 0
+# ceros = 0
+# digito = None
+# negaFloat = int
+# while numeros != '0' :
+#     numeros = input(f'Introduce un número entero positivo: ')
+    
+#     if numeros == '0':
+#         break
+#     for i in numeros:
+#         if numeros.isdigit() == False or int(numeros) < 0:
+#             print(f'No valida')
+#         else:
+#             if int(i) == 0:
+#                 ceros = ceros +1
+#             elif int(i)%2 == 0:
+#                 par = par +1
+#             else:
+#                 impar = impar +1
+# print(f'Dígitos pares: {par}')
+# print(f'Dígitos impares: {impar}')
+# print(f'Ceros: {ceros}')
 '''10
 Crear un programa que permita al usuario ingresar títulos de libros por teclado, 
 finalizando el ingreso al leerse el string “*” (asterisco). Cada vez que el usuario ingrese un string de longitud 1 
