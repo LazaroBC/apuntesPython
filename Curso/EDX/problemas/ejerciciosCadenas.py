@@ -70,3 +70,42 @@ y después muestre por pantalla la misma frase pero con la vocal introducida en 
 # frase = input("Introduce una frase: ")
 # vocal = input("Introduce una vocal en minúscula:  ")
 # print(frase.replace(vocal, vocal.upper()))
+
+'''
+Ejercicio 7
+Escribir un programa que pregunte el correo electrónico del usuario en la consola 
+y muestre por pantalla otro correo electrónico con el mismo nombre 
+(la parte delante de la arroba @) pero con dominio ceu.es.
+'''
+# correo = input(f'Correo: ')
+# correo2 = correo[0:correo.find('@')+1] + 'ceu.es'
+# print(f'El correo nuevo es: {correo2}')
+
+'''
+Ejercicio 8
+Escribir un programa que pregunte por consola el precio de un producto en euros con dos decimales 
+y muestre por pantalla el número de euros y el número de céntimos del precio introducido.
+'''
+# precio = float(input(f'Introduce el precio:  '))
+# precio2 = int(round(precio, 2))
+# precio3 = str(precio)
+# punto = precio3.index('.')
+# extraer = precio3[punto+1:punto+3]
+# print(f'Precio: {precio2}.{extraer}')
+# print(f'euros: {abs(precio2)}')
+# print(f'Decimales: {extraer}')
+
+# precio = input("Introduce el precio del producto con dos decimales:  ")
+# print(precio[:precio.find('.')], 'euros y', precio[precio.find('.')+1:], 'céntimos.')
+
+'''
+Ejercicio 9
+Escribir un programa que pregunte al usuario la fecha de su nacimiento en formato dd/mm/aaaa y muestra por pantalla, 
+el día, el mes y el año. 
+Adaptar el programa anterior para que también funcione cuando el día o el mes se introduzcan con un solo carácter.
+'''
+fecha = input(f'Fecha de nacimiento dd/mm/aaaa: ')
+dia = fecha[:fecha.find('/')]
+mes = fecha[fecha.find('/')+1:]
+anyo = fecha[fecha.find('/'):]
+print(f'Hoy es {dia} del {mes} del año {anyo}')
